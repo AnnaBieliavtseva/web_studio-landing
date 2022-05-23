@@ -1,0 +1,34 @@
+.about {
+  &__list {
+    display: flex;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 70px;
+      bottom: 0;
+
+      background-color: rgba(47, 48, 58, 0.8);
+    }
+  }
+  &__text {
+    position: absolute;
+    width: 100%;
+    bottom: 27px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: var(--primary-white-color);
+    text-align: center;
+  }
+}
