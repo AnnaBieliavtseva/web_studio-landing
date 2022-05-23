@@ -1,7 +1,12 @@
 .about {
   &__list {
-    display: flex;
+    display: none;
+
+    @include desktop {
+      display: flex;
+    }
   }
+
   &__item {
     position: relative;
     display: flex;

@@ -116,53 +116,76 @@
         </div>
       </section>
 
-      <!-- <section class="section section--no-padding-top">
+      <section class="section section--no-padding-top">
         <div class="container">
-          <h2 class="section__title">Чем мы занимаемся</h2>
+          <h2 class="section__title section__title--hidden">Чем мы занимаемся</h2>
           <ul class="about__list">
             <li class="about__item">
-              <img
-                src="./images/keyboard.jpg"
-                alt="Человек печатает текст на клавиатуре"
-                width="370"
-                class="about__img"
-              />
+              <picture>
+                <source
+                  srcset="./images/about/keyboard.jpg 1x, ./images/about/keyboard-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <img src="./images/about/keyboard.jpg" alt="Человек печатает текст на клавиатуре" />
+              </picture>
+
               <p class="about__text">Десктопные приложения</p>
             </li>
             <li class="about__item">
-              <img
-                src="./images/notebook.jpg"
-                alt="Ноутбук, с разметкой страницы"
-                class="about__img"
-                width="370"
-              />
-
+              <picture>
+                <source
+                  srcset="./images/about/notebook.jpg 1x, ./images/about/notebook-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <img src="./images/about/notebook.jpg" alt="Ноутбук, с разметкой страницы" />
+              </picture>
               <p class="about__text">Мобильные приложения</p>
             </li>
             <li class="about__item">
-              <img
-                src="./images/tablet.jpg"
-                alt="Палитра веб-цветов"
-                class="about__img"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/about/tablet.jpg 1x, ./images/about/tablet-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <img src="./images/about/tablet.jpg" alt="Палитра веб-цветов" />
+              </picture>
+
               <p class="about__text">Дизайнерские решения</p>
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
-      <!-- <section class="section section--other-background">
+      <section class="section section--other-background">
         <div class="container">
           <h2 class="section__title">Наша команда</h2>
           <ul class="team-list">
             <li class="team-list-item">
-              <img
-                src="./images/product-designer.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-                class="team-list-image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/product-designer.jpg    1x,
+                    ./images/team/product-designer-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/product-designer-tablet.jpg    1x,
+                    ./images/team/product-designer-tablet-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/product-designer-mob.jpg     1x,
+                    ../images/team/product-designer-mob-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                />
+                <img src="./images/team/product-designer.jpg" alt="Игорь Демьяненко" />
+              </picture>
+
               <div class="team-box">
                 <h3 class="team-list-title">Игорь Демьяненко</h3>
                 <p lang="en" class="team-list-text">Product Designer</p>
@@ -196,12 +219,31 @@
               </div>
             </li>
             <li class="team-list-item">
-              <img
-                src="./images/frontend-developer.jpg"
-                alt="Ольга Репина"
-                width="270"
-                class="team-list-image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/frontend-developer.jpg    1x,
+                    ./images/team/frontend-developer-2x.jpg 2x
+                  "
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/frontend-developer-tablet.jpg    1x,
+                    ./images/team/frontend-developer-tablet-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/frontend-developer-mob.jpg     1x,
+                    ../images/team/frontend-developer-mob-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                />
+                <img src="./images/team/frontend-developer.jpg" alt="Ольга Репина" />
+              </picture>
+
               <div class="team-box">
                 <h3 class="team-list-title">Ольга Репина</h3>
                 <p lang="en" class="team-list-text">Frontend Developer</p>
@@ -235,12 +277,28 @@
               </div>
             </li>
             <li class="team-list-item">
-              <img
-                src="./images/marketing.jpg"
-                alt="Николай Тарасов"
-                width="270"
-                class="team-list-image"
-              />
+              <picture>
+                <source
+                  srcset="./images/team/marketing.jpg 1x, ./images/team/marketing-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/marketing-tablet.jpg    1x,
+                    ./images/team/marketing-tablet-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/marketing-mob.jpg     1x,
+                    ../images/team/marketing-mob-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                />
+                <img src="./images/team/marketing.jpg" alt="Николай Тарасов" />
+              </picture>
+
               <div class="team-box">
                 <h3 class="team-list-title">Николай Тарасов</h3>
                 <p lang="en" class="team-list-text">Marketing</p>
@@ -274,12 +332,28 @@
               </div>
             </li>
             <li class="team-list-item">
-              <img
-                src="./images/ui-designer.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-                class="team-list-image"
-              />
+              <picture>
+                <source
+                  srcset="./images/team/ui-designer.jpg 1x, ./images/team/ui-designer-2x.jpg 2x"
+                  media="(min-width:1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/ui-designer-tablet.jpg    1x,
+                    ./images/team/ui-designer-tablet-2x.jpg 2x
+                  "
+                  media="(min-width:768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/ui-designer-mob.jpg     1x,
+                    ../images/team/ui-designer-mob-2x.jpg 2x
+                  "
+                  media="(min-width:480px)"
+                />
+                <img src="./images/team/ui-designer.jpg" alt="Михаил Ермаков" />
+              </picture>
+
               <div class="team-box">
                 <h3 class="team-list-title">Михаил Ермаков</h3>
                 <p lang="en" class="team-list-text">UI Designer</p>
@@ -314,7 +388,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!-- <section class="section clients">
         <div class="container">
           <h2 class="section__title">Постоянные клиенты</h2>

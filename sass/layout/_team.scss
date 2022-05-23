@@ -1,6 +1,11 @@
 .team-list {
-  display: flex;
   text-align: center;
+
+  @include tablet {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
 .team-list-item {
@@ -9,8 +14,15 @@
   border-radius: 0px 0px 4px 4px;
   background-color: var(--primary-white-color);
 
-  &:not(:last-child) {
-    margin-right: 30px;
+  margin-bottom: 30px;
+
+  @include tablet {
+    margin: 15px;
+    flex-basis: calc((100% - 60px) / 2);
+  }
+
+  @include desktop {
+    flex-basis: calc((100% - 120px) / 4);
   }
 }
 

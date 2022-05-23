@@ -21,7 +21,19 @@
 
   color: var(--title-text-color);
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
+
+  @include desktop {
+    font-size: 36px;
+  }
+}
+
+.section__title--hidden {
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
 }
