@@ -54,7 +54,7 @@
     </header> -->
 
     <main>
-      <!-- <section class="hero">
+      <section class="hero">
         <div class="container">
           <h1 class="hero__title">
             Эффективные решения <br />
@@ -62,7 +62,7 @@
           </h1>
           <button type="button" class="hero__btn main__btn" data-modal-open>Заказать услугу</button>
         </div>
-      </section> -->
+      </section>
 
       <section class="section">
         <div class="container">
@@ -163,11 +163,12 @@
             <li class="team-list-item">
               <picture>
                 <source
+                  media="(min-width:1200px)"
                   srcset="
                     ./images/team/product-designer.jpg    1x,
                     ./images/team/product-designer-2x.jpg 2x
                   "
-                  media="(min-width:1200px)"
+                  sizes="(min-width:1200px), 270px, 25vw"
                 />
                 <source
                   srcset="
@@ -181,7 +182,7 @@
                     ./images/team/product-designer-mob.jpg     1x,
                     ../images/team/product-designer-mob-2x.jpg 2x
                   "
-                  media="(min-width:480px)"
+                  media="(max-width:767px)"
                 />
                 <img src="./images/team/product-designer.jpg" alt="Игорь Демьяненко" />
               </picture>
@@ -226,6 +227,7 @@
                     ./images/team/frontend-developer-2x.jpg 2x
                   "
                   media="(min-width:1200px)"
+                  sizes="(min-width:1200px) 25vw"
                 />
                 <source
                   srcset="
@@ -239,7 +241,7 @@
                     ./images/team/frontend-developer-mob.jpg     1x,
                     ../images/team/frontend-developer-mob-2x.jpg 2x
                   "
-                  media="(min-width:480px)"
+                  media="(max-width:767px)"
                 />
                 <img src="./images/team/frontend-developer.jpg" alt="Ольга Репина" />
               </picture>
@@ -281,6 +283,7 @@
                 <source
                   srcset="./images/team/marketing.jpg 1x, ./images/team/marketing-2x.jpg 2x"
                   media="(min-width:1200px)"
+                  sizes="(min-width:1200px) 25vw"
                 />
                 <source
                   srcset="
@@ -294,7 +297,7 @@
                     ./images/team/marketing-mob.jpg     1x,
                     ../images/team/marketing-mob-2x.jpg 2x
                   "
-                  media="(min-width:480px)"
+                  media="(max-width:767px)"
                 />
                 <img src="./images/team/marketing.jpg" alt="Николай Тарасов" />
               </picture>
@@ -334,8 +337,9 @@
             <li class="team-list-item">
               <picture>
                 <source
-                  srcset="./images/team/ui-designer.jpg 1x, ./images/team/ui-designer-2x.jpg 2x"
                   media="(min-width:1200px)"
+                  srcset="./images/team/ui-designer.jpg 1x, ./images/team/ui-designer-2x.jpg 2x"
+                  sizes="(min-width:1200px) 25vw"
                 />
                 <source
                   srcset="
@@ -349,7 +353,7 @@
                     ./images/team/ui-designer-mob.jpg     1x,
                     ../images/team/ui-designer-mob-2x.jpg 2x
                   "
-                  media="(min-width:480px)"
+                  media="(max-width:767px)"
                 />
                 <img src="./images/team/ui-designer.jpg" alt="Михаил Ермаков" />
               </picture>
@@ -389,7 +393,7 @@
           </ul>
         </div>
       </section>
-      <!-- <section class="section clients">
+      <section class="section clients">
         <div class="container">
           <h2 class="section__title">Постоянные клиенты</h2>
           <ul class="clients-list">
@@ -431,7 +435,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
     </main>
 
     <!-- <footer class="page-footer">
