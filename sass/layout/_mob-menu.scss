@@ -1,0 +1,17 @@
+.menu-open-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.mob-menu__icon {
+  transition: fill var(--primary-transition);
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+}
