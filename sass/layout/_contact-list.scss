@@ -1,6 +1,13 @@
 .contact-list {
-  display: flex;
-  margin-left: auto;
+  // display: flex;
+  // margin-left: auto;
+  display: none;
+
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+  }
 }
 
 .contact-list__item:not(:last-child) {

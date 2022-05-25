@@ -9,6 +9,8 @@
   padding-top: 48px;
   padding-bottom: 48px;
   overflow-y: auto;
+  transition: opacity var(--primary-transition), visibility var(--primary-transition);
+
   .container {
     display: flex;
     flex-direction: column;
@@ -19,18 +21,22 @@
 
 .menu-open-btn {
   display: block;
-  margin-left: 0;
-  margin-bottom: 8px;
+  margin-left: auto;
+  margin-bottom: 22px;
+  margin-top: 22px;
   border: none;
   background-color: transparent;
   cursor: pointer;
   transition: fill var(--primary-transition);
-}
+  .mob-menu__icon {
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }
+  }
 
-.mob-menu__icon {
-  .menu-open-btn:hover,
-  .menu-open-btn:focus {
-    fill: var(--accent-color);
+  @include tablet {
+    display: none;
   }
 }
 
@@ -43,14 +49,11 @@
   background-color: transparent;
 
   transition: fill var(--primary-transition);
-}
-
-.mob-menu__close-icon {
-  fill: var(--title-text-color);
-
-  .mob-menu__close-btn:hover &,
-  .mob-menu__close-btn:focus & {
-    fill: var(--accent-color);
+  .mob-menu__close-icon {
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }
   }
 }
 

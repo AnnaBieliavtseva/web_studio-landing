@@ -353,6 +353,14 @@ img {
   letter-spacing: 0.02em;
   border-bottom: 1px solid #ececec;
 }
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+}
 
 .logo {
   color: var(--title-text-color);
@@ -361,6 +369,7 @@ img {
   font-size: 26px;
   line-height: 1.19;
   text-decoration: none;
+  margin-right: auto;
 }
 
 .logo__accent {
@@ -368,8 +377,17 @@ img {
 }
 
 .navigation {
-  display: flex;
-  align-items: center;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.no-scroll {
+  overflow: hidden;
 }
 
 .site-nav {
@@ -408,8 +426,14 @@ img {
 }
 
 .contact-list {
-  display: flex;
-  margin-left: auto;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .contact-list {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+  }
 }
 
 .contact-list__item:not(:last-child) {
@@ -934,6 +958,7 @@ img {
   padding-top: 48px;
   padding-bottom: 48px;
   overflow-y: auto;
+  transition: opacity var(--primary-transition), visibility var(--primary-transition);
 }
 .mob-menu .container {
   display: flex;
@@ -944,17 +969,21 @@ img {
 
 .menu-open-btn {
   display: block;
-  margin-left: 0;
-  margin-bottom: 8px;
+  margin-left: auto;
+  margin-bottom: 22px;
+  margin-top: 22px;
   border: none;
   background-color: transparent;
   cursor: pointer;
   transition: fill var(--primary-transition);
 }
-
-.mob-menu__icon .menu-open-btn:hover,
-.mob-menu__icon .menu-open-btn:focus {
+.menu-open-btn .mob-menu__icon:hover, .menu-open-btn .mob-menu__icon:focus {
   fill: var(--accent-color);
+}
+@media screen and (min-width: 768px) {
+  .menu-open-btn {
+    display: none;
+  }
 }
 
 .mob-menu__close-btn {
@@ -966,11 +995,7 @@ img {
   background-color: transparent;
   transition: fill var(--primary-transition);
 }
-
-.mob-menu__close-icon {
-  fill: var(--title-text-color);
-}
-.mob-menu__close-btn:hover .mob-menu__close-icon, .mob-menu__close-btn:focus .mob-menu__close-icon {
+.mob-menu__close-btn .mob-menu__close-icon:hover, .mob-menu__close-btn .mob-menu__close-icon:focus {
   fill: var(--accent-color);
 }
 
