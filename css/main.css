@@ -353,10 +353,6 @@ img {
   letter-spacing: 0.02em;
   border-bottom: 1px solid #ececec;
 }
-.header__container {
-  display: flex;
-  align-items: center;
-}
 
 .logo {
   color: var(--title-text-color);
@@ -935,10 +931,15 @@ img {
   height: 100vh;
   z-index: 1;
   background-color: var(--primary-white-color);
-  padding: 48px 40px 48px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  overflow-y: auto;
 }
 .mob-menu .container {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .menu-open-btn {
@@ -984,5 +985,52 @@ img {
   line-height: 1.18;
   letter-spacing: 0.02em;
   color: var(--title-text-color);
+  text-decoration: none;
+}
+
+.mob-menu-site-nav__link--current-mob {
+  color: var(--accent-color);
+}
+
+.mob-menu-contact-list {
+  margin-bottom: 64px;
+}
+
+.mob-menu-contact-list__tel {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.mob-menu-contact-list__mail {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
+
+.mob-menu-socials-list {
+  display: flex;
+}
+
+.mob-menu-socials-item:not(:first-child) {
+  padding-left: 10px;
+}
+.mob-menu-socials-item:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mob-menu-socials-link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--accent-color);
   text-decoration: none;
 }/*# sourceMappingURL=main.css.map */
