@@ -1,6 +1,4 @@
 .contact-list {
-  // display: flex;
-  // margin-left: auto;
   display: none;
 
   @include tablet {
@@ -8,12 +6,26 @@
     flex-direction: column;
     margin-left: auto;
   }
+
+  @include desktop {
+    display: flex;
+    margin-left: auto;
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
-.contact-list__item:not(:last-child) {
-  margin-right: 50px;
-}
+.contact-list__item {
+  &:not(:last-child) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-bottom: 10px;
+    }
 
+    @include desktop {
+      margin-right: 50px;
+    }
+  }
+}
 .contact-list__link {
   color: var(--primary-text-color);
   text-decoration: none;
