@@ -1,12 +1,22 @@
 .filters-list {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  @include tablet {
+    justify-content: center;
 
-  margin-bottom: 50px;
+    margin-bottom: 30px;
+  }
+  @include desktop {
+    margin-bottom: 50px;
+  }
 }
 
 .filters-list-item:not(:last-child) {
   margin-right: 8px;
+  @media screen and (max-width: 767px) {
+  }
+  margin-bottom: 15px;
 }
 
 .filter-btn {
@@ -38,7 +48,10 @@
 
 .card-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin-top: 40px;
 }
 
 .card-list-title {
@@ -52,8 +65,8 @@
 }
 
 .card-list-item {
-  width: 370px;
-  margin-right: 30px;
+  // width: 370px;
+  // margin-right: 30px;
   margin-bottom: 30px;
   position: relative;
 }

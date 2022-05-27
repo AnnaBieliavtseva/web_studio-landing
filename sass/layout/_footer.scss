@@ -6,20 +6,40 @@
 }
 
 .container.footer {
-  // display: flex;
-  // align-items: baseline;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+
+.footer-wrap {
+  // @media screen and (min-width: 768px) and (max-width: 1199px)
+  @include tablet {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    @include desktop {
+      align-items: baseline;
+    }
+  }
 }
 
 .footer-thumb {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
   text-align: center;
   align-items: center;
   margin-bottom: 60px;
+  @include desktop {
+    flex-grow: 1;
+    align-items: flex-start;
+    text-align: left;
+  }
 }
 
 .page-footer .logo {
@@ -64,6 +84,9 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 60px;
+  @include desktop {
+    align-items: flex-start;
+  }
 }
 
 .join {
@@ -73,6 +96,9 @@
   color: var(--primary-white-color);
   text-transform: uppercase;
   margin-bottom: 20px;
+  @include desktop {
+    margin-right: auto;
+  }
 }
 
 .socials-list .footer {
@@ -94,14 +120,19 @@
 }
 
 .subscribe-wrap {
-  // margin-left: 93px;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @include desktop {
+    margin-left: 93px;
+  }
 }
 
 .subscribe-form {
-  // display: flex;
+  @include desktop {
+    display: flex;
+  }
 }
 
 .subscribe-icon {
@@ -110,7 +141,6 @@
 }
 
 .subscribe-input {
-  // width: 358px;
   width: 90vw;
   height: 50px;
   padding-left: 16px;
@@ -127,6 +157,10 @@
     line-height: 1.25;
     color: rgba(255, 255, 255, 0.6);
   }
+
+  @include desktop {
+    width: 358px;
+  }
 }
 
 .main__btn.subscribe {
@@ -134,4 +168,8 @@
   align-items: center;
   justify-content: center;
   margin: 0 auto;
+  @include desktop {
+    margin-left: 10px;
+    height: 50px;
+  }
 }
