@@ -88,6 +88,9 @@
   letter-spacing: 0.02em;
   color: var(--accent-color);
   text-decoration: none;
+  @media screen and (max-width: 380px) {
+    font-size: 30px;
+  }
 }
 
 .mob-menu-contact-list__mail {
@@ -121,4 +124,7 @@
   letter-spacing: 0.02em;
   color: var(--accent-color);
   text-decoration: none;
+  @media screen and (max-width: 380px) {
+    font-size: 14px;
+  }
 }
