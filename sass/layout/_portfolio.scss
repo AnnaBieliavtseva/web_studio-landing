@@ -9,7 +9,6 @@
   @include tablet {
     flex-wrap: nowrap;
     justify-content: center;
-    margin-bottom: 30px;
   }
   @include desktop {
     margin-bottom: 50px;
@@ -73,10 +72,12 @@
 }
 
 .card-list-item {
-  margin-bottom: 30px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
   position: relative;
   @include tablet {
-    max-width: 354px;
     margin: 15px;
     flex-basis: calc((100% - 60px) / 2);
   }

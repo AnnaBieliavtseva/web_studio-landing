@@ -35,10 +35,12 @@
         <nav class="navigation">
           <ul class="site-nav">
             <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link site-nav__link--current">Студия</a>
+              <a href="./index.html" class="site-nav__link">Студия</a>
             </li>
             <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link">Портфолио</a>
+              <a href="./portfolio.html" class="site-nav__link site-nav__link--current"
+                >Портфолио</a
+              >
             </li>
             <li class="site-nav__item"><a href="" class="site-nav__link">Контакты</a></li>
           </ul>
@@ -69,14 +71,14 @@
           </button>
           <ul class="mob-menu-site-nav">
             <li class="mob-menu-site-nav__item">
-              <a
-                href="./index.html"
-                class="mob-menu-site-nav__link mob-menu-site-nav__link--current-mob"
-                >Студия</a
-              >
+              <a href="./index.html" class="mob-menu-site-nav__link">Студия</a>
             </li>
             <li class="mob-menu-site-nav__item">
-              <a href="./portfolio.html" class="mob-menu-site-nav__link">Портфолио</a>
+              <a
+                href="./portfolio.html"
+                class="mob-menu-site-nav__link mob-menu-site-nav__link--current-mob"
+                >Портфолио</a
+              >
             </li>
             <li class="mob-menu-site-nav__item">
               <a href="" class="mob-menu-site-nav__link">Контакты</a>
@@ -149,18 +151,18 @@
                       "
                     />
                     <source
+                      media="(min-width:768px)"
                       srcset="
                         ./images/portfolio/technoquack-tab.jpg    1x,
                         ./images/portfolio/technoquack-tab-2x.jpg 2x
                       "
-                      media="(min-width:768px)"
                     />
                     <source
-                      srcset="
-                        ./images/portfolio/technoquack-mob.jpg     1x,
-                        ../images/portfolio/technoquack-mob-2x.jpg 2x
-                      "
                       media="(max-width:767px)"
+                      srcset="
+                        ./images/portfolio/technoquack-mob.jpg    1x,
+                        ./images/portfolio/technoquack-mob-2x.jpg 2x
+                      "
                     />
                     <img
                       src="./images/portfolio/technoquack.jpg"

@@ -1,7 +1,6 @@
 .about {
+  display: none;
   &__list {
-    display: none;
-
     @include desktop {
       display: flex;
     }
