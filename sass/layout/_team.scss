@@ -19,10 +19,12 @@
   @include tablet {
     margin: 15px;
     flex-basis: calc((100% - 60px) / 2);
+    margin-bottom: 30px;
   }
 
   @include desktop {
     flex-basis: calc((100% - 120px) / 4);
+    
   }
 }
 

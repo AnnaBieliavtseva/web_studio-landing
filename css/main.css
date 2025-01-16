@@ -610,9 +610,12 @@ img {
   display: none;
 }
 @media screen and (min-width: 1200px) {
-  .about__list {
+  .about {
     display: flex;
   }
+}
+.about__list {
+  display: flex;
 }
 .about__item {
   position: relative;
@@ -666,6 +669,7 @@ img {
   .team-list-item {
     margin: 15px;
     flex-basis: calc((100% - 60px) / 2);
+    margin-bottom: 30px;
   }
 }
 @media screen and (min-width: 1200px) {
