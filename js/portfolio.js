@@ -1,105 +1,111 @@
 const filters = document.querySelector('.filters-list ');
 const list = document.querySelector('.card-list');
 
-filters.addEventListener('click', onclick)
+filters.addEventListener('click', onclick);
 function onclick(e) {
-   if (e.target.nodeName !== 'BUTTON') {
-     return;
-    }
-    // const btnValue = e.target.dataset.value;
-    
-    // filterList(portfolioCards);
+  if (e.target.nodeName !== 'BUTTON') {
+    return;
+  }
+  const btnValue = e.target.dataset.value;
+  console.log(btnValue);
+  
+  const filteredCards = filterList(portfolioCards, btnValue);
+  if (btnValue === 'all') {
+  list.innerHTML = createMarkup(portfolioCards);
+  } else {
+    list.innerHTML = createMarkup(filteredCards);
+  }
+  
 }
-
-
 
 const portfolioCards = [
   {
     type: 'website',
     src: 'technoquack',
-    alt: 'Веб-сайт с описанием команды людей',
+    alt: 'technoquack visualization',
     descr:
-      'Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.',
-    title: 'Технокряк',
-    text: 'Веб - сайт',
+      'A corporate website for a technology company that develops innovative business solutions. The project includes a modern and user-friendly interface, seamless navigation, and responsive design.',
+    title: 'Technoquack',
+    text: 'Website',
   },
   {
     type: 'design',
     src: 'poster',
-    alt: 'Постер баскетбольной команды',
+    alt: 'Poster of basketball team',
     descr:
-      'Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.',
-    title: 'Постер New Orlean vs Golden Star',
-    text: 'Дизайн',
+      'A dynamic and eye-catching poster designed for a basketball match. The layout and color scheme were carefully chosen to reflect the energy and competitiveness of the game.',
+    title: 'Poster New Orlean vs Golden Star',
+    text: 'Design',
   },
   {
     type: 'app',
     src: 'restaurant',
-    alt: 'Логотип ресторана морепродуктов',
+    alt: 'Logo of seafood restaurant',
     descr:
-      'Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.',
-    title: 'Ресторан Seafood',
-    text: 'Приложение',
+      'A stylish and functional website for a seafood restaurant in the USA. It features an interactive menu, an online reservation system, and stunning visuals that enhance the user experience.',
+    title: 'Seafood Restaurant',
+    text: 'Application',
   },
   {
     type: 'marketing',
     src: 'project-prime',
-    alt: 'Наушники',
+    alt: 'Headphones',
     descr:
-      'Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.',
-    title: 'Проект Prime',
-    text: 'Маркетинг',
+      'A cutting-edge web application for real-time data analytics. The platform enables businesses to track key performance indicators with intuitive dashboards and insightful reports.',
+    title: 'Project Prime',
+    text: 'Marketing',
   },
   {
     type: 'app',
     src: 'project-boxes',
-    alt: 'Картонные коробки',
+    alt: 'Boxes image',
     descr:
-      'Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.',
+      'An e-commerce website specializing in customizable cardboard packaging. The online store includes a product catalog, customization options, and a smooth checkout process to enhance customer convenience.',
     title: 'Проект Boxes',
-    text: 'Приложение',
+    text: 'Application',
   },
   {
     type: 'website',
     src: 'inspiration',
-    alt: 'Веб-сайт',
+    alt: 'Website',
     descr:
-      'Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.',
+      'A creative website for an international art community. It serves as a platform for artists to showcase their work, collaborate, and connect with like-minded individuals worldwide.',
     title: 'Inspiration has no Border',
-    text: 'Веб-сайт',
+    text: 'Website',
   },
   {
     type: 'design',
     src: 'edition',
-    alt: 'Книга',
+    alt: 'Book',
     descr:
-      'Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.',
-    title: 'Издание Limited Edition',
-    text: 'Дизайн',
+      'The resource offers comprehensive solutions with different levels of functionality and services. This allows visitors to obtain complete information about a company or an individual.',
+    title: 'Limited Edition Publication',
+    text: 'Design',
   },
   {
     type: 'marketing',
     src: 'project-lab',
-    alt: 'Логотип проекта ЛАБ',
+    alt: 'Project LAB logo',
     descr:
-      'Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.',
-    title: 'Проект LAB',
-    text: 'Маркетинг',
+      'The resource offers comprehensive solutions with different levels of functionality and services. This allows visitors to obtain complete information about a company or an individual.',
+    title: 'Project LAB',
+    text: 'Marketing',
   },
   {
     type: 'app',
     src: 'growing-business',
-    alt: 'Веб-сайт приложения для бизнеса',
+    alt: 'Business application website',
     descr:
-      'Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании или частном лице.',
+      'The resource offers comprehensive solutions with different levels of functionality and services. This allows visitors to obtain complete information about a company or an individual.',
     title: 'Growing Business',
-    text: 'Приложение',
+    text: 'Application',
   },
 ];
 
 function createMarkup(arr) {
-    return arr.map(
-      ({  src, alt, descr, title, text }) =>
+  return arr
+    .map(
+      ({ src, alt, descr, title, text }) =>
         `<li class="card-list-item"">
               <a href="" class="card-list-link">
                 <div class="card-list-top-wrap">
@@ -138,13 +144,12 @@ function createMarkup(arr) {
                 </div>
               </a>
             </li> `
-    ).join('');
+    )
+    .join('');
 }
 
-// function filterList(arr) {
-//     arr.filter(item => console.log(item.type === btnValue))
-// }
+function filterList(arr, value) {
+  return arr.filter(item => item.type === value);
+}
 
-
-
-list.insertAdjacentHTML('beforeend', createMarkup(portfolioCards));
+list.insertAdjacentHTML('beforeend', createMarkup(portfolioCards))
